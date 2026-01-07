@@ -114,50 +114,117 @@ document.addEventListener('DOMContentLoaded', () => {
         header.classList.toggle('is-scrolled', window.scrollY > 10);
     });
 
-    const contactForm = document.querySelector('[data-form]');
-    if (contactForm) {
-        const honeypot = contactForm.querySelector('.hp-field');
-        let statusNode = contactForm.querySelector('.form-status');
-        if (!statusNode) {
-            statusNode = document.createElement('p');
-            statusNode.className = 'form-status';
-            contactForm.appendChild(statusNode);
+    const forms = document.querySelectorAll('[data-form]');
+    const focusFullNameField = () => {
+        const nameField = document.getElementById('fullName');
+        if (nameField) {
+            nameField.focus({ preventScroll: true });
         }
-        const endpoint = contactForm.dataset.endpoint || 'https://formspree.io/f/xgejbqed';
+    };
 
-        contactForm.addEventListener('submit', async (event) => {
-            event.preventDefault();
-            statusNode.textContent = '';
-
-            if (honeypot && honeypot.value) {
-                return;
+    if (forms.length) {
+        forms.forEach((form) => {
+            const honeypot = form.querySelector('.hp-field');
+            let statusNode = form.querySelector('.form-status');
+            if (!statusNode) {
+                statusNode = document.createElement('p');
+                statusNode.className = 'form-status';
+                form.appendChild(statusNode);
             }
+            const endpoint = form.dataset.endpoint || 'https://formspree.io/f/xgejbqed';
 
-            if (!contactForm.reportValidity()) {
-                return;
-            }
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+                statusNode.textContent = '';
 
-            const formData = new FormData(contactForm);
-
-            try {
-                const response = await fetch(endpoint, {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        Accept: 'application/json'
-                    }
-                });
-
-                if (response.ok) {
-                    statusNode.textContent = 'Thank you. Our team will reach out shortly.';
-                    contactForm.reset();
-                } else {
-                    statusNode.textContent = 'Please email laxmidyes@gmail.com or call +91 70482 39718 to complete your request.';
+                if (honeypot && honeypot.value) {
+                    return;
                 }
-            } catch (error) {
-                console.error(error);
-                statusNode.textContent = 'Network issue. Use the email or phone fallback listed above.';
-            }
+
+                if (!form.reportValidity()) {
+                    return;
+                }
+
+                const formData = new FormData(form);
+
+                try {
+                    const response = await fetch(endpoint, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            Accept: 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        statusNode.textContent = 'Thank you. Our team will reach out shortly.';
+                        form.reset();
+                    } else {
+                        statusNode.textContent = 'Please email laxmidyes@gmail.com or call +91 70482 39718 to complete your request.';
+                    }
+                } catch (error) {
+                    console.error(error);
+                    statusNode.textContent = 'Network issue. Use the email or phone fallback listed above.';
+                }
+            });
         });
+
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            const focusIfHashMatches = () => {
+                if (window.location.hash === '#contact-form') {
+                    focusFullNameField();
+                }
+            };
+
+            focusIfHashMatches();
+            window.addEventListener('hashchange', focusIfHashMatches);
+            document.querySelectorAll('a[href="#contact-form"]').forEach((link) => {
+                link.addEventListener('click', () => {
+                    requestAnimationFrame(() => focusFullNameField());
+                });
+            });
+        }
     }
+
+    const docModal = document.querySelector('[data-doc-modal]');
+    let lastFocusedTrigger = null;
+
+    const closeDocModal = () => {
+        if (!docModal?.classList.contains('is-open')) {
+            return;
+        }
+        docModal.classList.remove('is-open');
+        docModal.setAttribute('aria-hidden', 'true');
+        body.classList.remove('modal-open');
+        if (lastFocusedTrigger) {
+            lastFocusedTrigger.focus();
+        }
+    };
+
+    const openDocModal = (trigger) => {
+        if (!docModal) {
+            return;
+        }
+        lastFocusedTrigger = trigger || document.activeElement;
+        docModal.classList.add('is-open');
+        docModal.setAttribute('aria-hidden', 'false');
+        body.classList.add('modal-open');
+        const focusTarget = docModal.querySelector('input, select, textarea, button:not([data-doc-modal-close])');
+        requestAnimationFrame(() => focusTarget?.focus());
+    };
+
+    document.querySelectorAll('[data-doc-modal-open]').forEach((btn) => {
+        btn.addEventListener('click', () => openDocModal(btn));
+    });
+
+    docModal?.querySelectorAll('[data-doc-modal-close]').forEach((btn) => {
+        btn.addEventListener('click', closeDocModal);
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            closeDocModal();
+        }
+    });
 });
