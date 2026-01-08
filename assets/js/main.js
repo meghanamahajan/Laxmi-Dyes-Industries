@@ -225,6 +225,55 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
             closeDocModal();
+            closeProductModal();
         }
+    });
+
+    const productModal = document.querySelector('[data-product-modal]');
+    const productTitleElement = document.querySelector('[data-product-title]');
+    const productFieldElement = document.querySelector('[data-product-field]');
+    let lastProductTrigger = null;
+
+    const closeProductModal = () => {
+        if (!productModal?.classList.contains('is-open')) {
+            return;
+        }
+        productModal.classList.remove('is-open');
+        productModal.setAttribute('aria-hidden', 'true');
+        body.classList.remove('modal-open');
+        if (lastProductTrigger) {
+            lastProductTrigger.focus();
+        }
+    };
+
+    const openProductModal = (trigger, productName) => {
+        if (!productModal) {
+            return;
+        }
+        lastProductTrigger = trigger || document.activeElement;
+        
+        if (productTitleElement) {
+            productTitleElement.textContent = productName || 'Product Enquiry';
+        }
+        if (productFieldElement) {
+            productFieldElement.value = productName || '';
+        }
+        
+        productModal.classList.add('is-open');
+        productModal.setAttribute('aria-hidden', 'false');
+        body.classList.add('modal-open');
+        const focusTarget = productModal.querySelector('input:not([type="hidden"]):not(.hp-field)');
+        requestAnimationFrame(() => focusTarget?.focus());
+    };
+
+    document.querySelectorAll('[data-product-modal-open]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const productName = btn.dataset.productName || 'Product';
+            openProductModal(btn, productName);
+        });
+    });
+
+    productModal?.querySelectorAll('[data-product-modal-close]').forEach((btn) => {
+        btn.addEventListener('click', closeProductModal);
     });
 });
