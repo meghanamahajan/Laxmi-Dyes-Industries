@@ -47,7 +47,7 @@
 
     <main id="main-content">
         <section class="hero" style="padding-bottom:2;">
-            <div class="hero__content hero__content--compact" style="width:100%;max-width:none;padding-left:0;padding-right:0;margin-bottom:0.2;">
+            <div class="hero__content hero__content--compact" style="width:100%;max-width:none;padding-left:0;padding-right:0;margin-bottom:0.05rem;">
                 <h1 style="text-align:center;">Industrial Chemical Supplier &amp; Exporter in Ankleshwar, Gujarat, India</h1>
                 <div class="hero-slider" id="hero-slider">
                     <button class="slider-arrow slider-arrow--left" id="slider-prev" aria-label="Previous">&#x2039;</button>
@@ -82,166 +82,8 @@
                         <button class="slider-arrow slider-arrow--right" id="slider-next" aria-label="Next">&#x203A;</button>
                 </div>
             </div>
-                <style>
-                .hero {
-                    width: 100vw;
-                    position: relative;
-                    left: 50%;
-                    right: 50%;
-                    margin-left: -50vw;
-                    margin-right: -50vw;
-                    background: linear-gradient(90deg, #eaf6fb 0%, #f7fbfd 100%);
-                    padding-top: 0.1rem;
-                    padding-bottom: 0.1rem;
-                }
-                .hero__content--compact {
-                    width: 100%;
-                    max-width: none;
-                    margin: 0;
-                    padding-left: 0;
-                    padding-right: 0;
-                }
-                .hero-slider {
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    margin-top: 0.1rem;
-                    margin-bottom: 0.1rem;
-                    position: relative;
-                    background: transparent;
-                    border-radius: 16px;
-                    box-shadow: 0 2px 16px rgba(0,0,0,0.04);
-                    padding: 1rem 0.2rem 1.2rem 0.2rem;
-                    max-width: 1200px;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-                .slider-track {
-                    display: flex;
-                    transition: transform 0.5s cubic-bezier(.4,0,.2,1);
-                    width: 100%;
-                    max-width: 1100px;
-                    overflow: hidden;
-                    margin: 0 auto;
-                }
-                .slider-item {
-                    min-width: 320px;
-                    max-width: 320px;
-                    margin: 0 16px;
-                    background: #fff;
-                    border-radius: 10px;
-                    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-                    text-align: center;
-                    border: 2px solid #e6f0fa;
-                    position: relative;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-end;
-                    height: 260px;
-                    overflow: hidden;
-                }
-                .slider-item img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    border-radius: 10px 10px 0 0;
-                    display: block;
-                    filter: none;
-                }
-                .slider-caption {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    background: none;
-                    color: #fff;
-                    font-weight: 900;
-                    font-size: 1.5rem;
-                    padding: 0.2em 0.5em;
-                    border-radius: 8px;
-                    letter-spacing: 0.5px;
-                    box-shadow: none;
-                    z-index: 2;
-                    text-align: center;
-                    pointer-events: none;
-                }
-                .slider-arrow {
-                    background: #fff;
-                    border: none;
-                    font-size: 2.2rem;
-                    color: #00b6f0;
-                    cursor: pointer;
-                    border-radius: 50%;
-                    width: 44px;
-                    height: 44px;
-                    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-50%);
-                    z-index: 2;
-                    transition: background 0.2s;
-                    opacity: 0.85;
-                }
-                .slider-arrow--left { left: 8px; }
-                .slider-arrow--right { right: 8px; }
-                .slider-arrow:hover { background: #e6f0fa; }
-                /* Responsive improvements */
-                @media (max-width: 1100px) {
-                    .slider-track { max-width: 98vw; }
-                    .slider-item { min-width: 260px; max-width: 260px; height: 200px; }
-                    .slider-item img { height: 100%; max-height: 200px; min-height: 120px; object-fit: cover; }
-                }
-                @media (max-width: 900px) {
-                    .hero-slider { padding: 1.2rem 0.2rem 1.5rem 0.2rem; flex-direction: column; }
-                    .slider-track { max-width: 100vw; }
-                    .slider-arrow--left { left: 0; }
-                    .slider-arrow--right { right: 0; }
-                    .slider-item { min-width: 90vw; max-width: 90vw; margin: 0 4vw; height: 180px; }
-                    .slider-item img { height: 100%; max-height: 180px; min-height: 100px; object-fit: cover; }
-                }
-                @media (max-width: 600px) {
-                    .hero__content--compact { padding: 0.5rem 0.2rem; }
-                    .hero-slider { padding: 0.5rem 0.1rem 0.7rem 0.1rem; }
-                    .slider-item { min-width: 98vw; max-width: 98vw; margin: 0 1vw; height: 140px; }
-                    .slider-item img {
-                        width: 100%;
-                        height: 100%;
-                        min-height: 80px;
-                        max-height: 140px;
-                        object-fit: cover;
-                        border-radius: 10px 10px 0 0;
-                        display: block;
-                    }
-                    h1, h2, h3 { font-size: 1.1em !important; }
-                    .btn, .btn--primary, .btn--secondary, .btn--outline { font-size: 0.95em; padding: 0.6em 1.1em; }
-                }
-                /* General mobile-friendly improvements for all sections */
-                @media (max-width: 700px) {
-                    .container, .header__inner, .section-header, .about-content, .card-grid, .split, .industry-grid, .why-choose__panel, .footer__grid {
-                        padding-left: 0.5rem !important;
-                        padding-right: 0.5rem !important;
-                        max-width: 100vw !important;
-                    }
-                    .primary-nav ul { flex-direction: column; gap: 0.5em; }
-                    .primary-nav li { margin-bottom: 0.5em; }
-                    .card-grid { grid-template-columns: 1fr !important; }
-                    .split { flex-direction: column !important; }
-                    .why-choose__grid--custom { grid-template-columns: 1fr !important; }
-                    .footer__grid { grid-template-columns: 1fr !important; }
-                }
-                </style>
-            <style>
-                .hero__content--compact {
-                    padding-top: 0.3rem;
-                    padding-bottom: 0.3rem;
-                    min-height: unset;
-                }
-                .hero {
-                    min-height: unset !important;
-                }
-            </style>
         </section>
-        <section class="section hero-intro-cta" style="margin-top:1.2rem;padding-top:0;">
+        <section class="section hero-intro-cta" style="margin-top:2.5rem;padding-top:0;">
             <div class="container" style="margin-top:0;padding-top:0;">
                 <div class="hero__intro">
                     <p style="font-size:0.95em;">Based in Asia’s leading chemical hub, Laxmi Dyes Industries specializes in sourcing and supplying premium industrial chemicals with dependable delivery and global reach.</p>
@@ -255,7 +97,7 @@
         <!-- About Us section removed -->
 
 
-        <section class="section products-preview" aria-labelledby="products-preview-title">
+        <section class="section products-preview" aria-labelledby="products-preview-title" style="margin-top:0.05rem;margin-bottom:0.05rem;">
             <div class="container">
                 <div class="section-header">
                     <div>
@@ -293,7 +135,7 @@
             </div>
         </section>
 
-        <section class="section solutions-preview">
+        <section class="section solutions-preview" style="margin-top:0.05rem;margin-bottom:0.05rem;">
             <div class="container split">
                 <div>
                     <p class="eyebrow">Reliable Chemical Trading &amp; Export Services</p>
@@ -331,7 +173,7 @@
 
 
 
-        <section class="section why-choose">
+        <section class="section why-choose" style="margin-top:0.05rem;margin-bottom:0.05rem;">
             <div class="container">
                 <div class="why-choose__panel">
                     <div class="why-choose__intro">
@@ -342,22 +184,22 @@
                     <div class="why-choose__grid why-choose__grid--custom">
                         <article class="why-card why-card--tenure">
                             <h3>20+ Years of Industry Tenure</h3>
-                            <p><strong>Seasoned Technical Support</strong><br>
+                            <p style="font-size:0.85em;"><strong>Seasoned Technical Support</strong><br>
                             With over two decades of expertise, we provide deep domain knowledge across the Textile, Paper, Construction, and Specialty Chemical sectors. Our longevity is a testament to our reliability in managing complex, high-volume export contracts.</p>
                         </article>
                         <article class="why-card why-card--location">
                             <h3>Strategic GIDC Hub (Ankleshwar)</h3>
-                            <p><strong>The Gujarat Advantage</strong><br>
+                            <p style="font-size:0.85em;"><strong>The Gujarat Advantage</strong><br>
                             Located in the heart of India’s largest chemical cluster, our proximity to production plants and the Mundra/Kandla ports ensures lean sourcing and rapid turnaround times. We convert our geographical advantage into cost-savings and agility for our clients.</p>
                         </article>
                         <article class="why-card why-card--compliance">
                             <h3>Compliance &amp; Safety First</h3>
-                            <p><strong>Audit-Ready Documentation</strong><br>
+                            <p style="font-size:0.85em;"><strong>Audit-Ready Documentation</strong><br>
                             Every shipment is governed by strict Standard Operating Procedures (SOPs). We provide comprehensive, GHS-compliant Safety Data Sheets (SDS), Certificates of Analysis (COA), and the necessary global documentation to ensure seamless, duty-free customs clearance.</p>
                         </article>
                         <article class="why-card why-card--logistics">
                             <h3>End-to-End Logistics Control</h3>
-                            <p><strong>DG-Certified Global Delivery</strong><br>
+                            <p style="font-size:0.85em;"><strong>DG-Certified Global Delivery</strong><br>
                             From UN-approved packaging for Dangerous Goods (DG) to multi-modal transport coordination, we manage the entire export lifecycle. Our expertise in ISO tanks and FCL (Full Container Load) logistics ensures your cargo arrives on time and in perfect specification.</p>
                         </article>
                     </div>
