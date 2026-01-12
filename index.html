@@ -137,13 +137,12 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-end;
-                    height: 100%;
+                    height: 260px;
+                    overflow: hidden;
                 }
                 .slider-item img {
                     width: 100%;
-                    aspect-ratio: 4/3;
-                    height: auto;
-                    max-height: 180px;
+                    height: 100%;
                     object-fit: cover;
                     border-radius: 10px 10px 0 0;
                     display: block;
@@ -189,22 +188,30 @@
                 /* Responsive improvements */
                 @media (max-width: 1100px) {
                     .slider-track { max-width: 98vw; }
-                    .slider-item { min-width: 260px; max-width: 260px; }
-                    .slider-item img { max-height: 120px; aspect-ratio: 4/3; height: auto; }
+                    .slider-item { min-width: 260px; max-width: 260px; height: 200px; }
+                    .slider-item img { height: 100%; max-height: 200px; min-height: 120px; object-fit: cover; }
                 }
                 @media (max-width: 900px) {
                     .hero-slider { padding: 1.2rem 0.2rem 1.5rem 0.2rem; flex-direction: column; }
                     .slider-track { max-width: 100vw; }
                     .slider-arrow--left { left: 0; }
                     .slider-arrow--right { right: 0; }
-                    .slider-item { min-width: 90vw; max-width: 90vw; margin: 0 4vw; }
-                    .slider-item img { max-height: 100px; aspect-ratio: 4/3; height: auto; }
+                    .slider-item { min-width: 90vw; max-width: 90vw; margin: 0 4vw; height: 180px; }
+                    .slider-item img { height: 100%; max-height: 180px; min-height: 100px; object-fit: cover; }
                 }
                 @media (max-width: 600px) {
                     .hero__content--compact { padding: 0.5rem 0.2rem; }
                     .hero-slider { padding: 0.5rem 0.1rem 0.7rem 0.1rem; }
-                    .slider-item { min-width: 98vw; max-width: 98vw; margin: 0 1vw; }
-                    .slider-item img { max-height: 80px; }
+                    .slider-item { min-width: 98vw; max-width: 98vw; margin: 0 1vw; height: 140px; }
+                    .slider-item img {
+                        width: 100%;
+                        height: 100%;
+                        min-height: 80px;
+                        max-height: 140px;
+                        object-fit: cover;
+                        border-radius: 10px 10px 0 0;
+                        display: block;
+                    }
                     h1, h2, h3 { font-size: 1.1em !important; }
                     .btn, .btn--primary, .btn--secondary, .btn--outline { font-size: 0.95em; padding: 0.6em 1.1em; }
                 }
@@ -237,8 +244,7 @@
         <section class="section hero-intro-cta" style="margin-top:1.2rem;padding-top:0;">
             <div class="container" style="margin-top:0;padding-top:0;">
                 <div class="hero__intro">
-                    <p>Laxmi Dyes Industries is a trusted industrial chemical wholesaler, trader and exporter located in GIDC Ankleshwar, Bharuch, Gujarat, India. With a strong presence in the chemical supply chain since 2000, we specialize in sourcing and delivering high-quality industrial chemicals to domestic industries and global markets.</p>
-                    <p>Situated in one of Asia’s largest chemical hubs, we leverage our strategic location and extensive vendor network to offer reliable supply, competitive pricing, and industry-compliant products for diverse industrial applications.</p>
+                    <p style="font-size:1.1em;">Based in Asia’s leading chemical hub, Laxmi Dyes Industries specializes in sourcing and supplying premium industrial chemicals with dependable delivery and global reach.</p>
                 </div>
                 <div class="hero__cta">
                     <a class="btn btn--primary" href="products.html">View Product</a>
@@ -252,8 +258,8 @@
                     <h2 id="about-preview-title">About Us</h2>
                 </div>
                 <div class="about-content">
-                    <p>Laxmi Dyes Industries has been a trusted name in the chemical industry since 2000, serving a wide range of industrial clients with quality products and reliable service. Our expertise spans sourcing, trading, and exporting chemicals for textile, manufacturing, water treatment, and more. We are committed to compliance, safety, and customer satisfaction, ensuring every order meets the highest standards.</p>
-                    <p>Our team combines deep market knowledge with a proactive approach to logistics and documentation, making us a preferred partner for both domestic and international buyers.</p>
+                    <p style="font-size:0.85em;">Laxmi Dyes Industries has been a trusted name in the chemical industry since 2000, serving a wide range of industrial clients with quality products and reliable service. Our expertise spans sourcing, trading, and exporting chemicals for textile, manufacturing, water treatment, and more. We are committed to compliance, safety, and customer satisfaction, ensuring every order meets the highest standards.</p>
+                    <p style="font-size:0.85em;">Our team combines deep market knowledge with a proactive approach to logistics and documentation, making us a preferred partner for both domestic and international buyers.</p>
                     <a class="btn btn--primary" href="contact.html">Contact Us</a>
                 </div>
             </div>
