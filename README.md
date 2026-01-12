@@ -1,6 +1,6 @@
 # Laxmi Dyes Industries – Static Website
 
-World-class, responsive marketing site for Laxmi Dyes Industries covering products, solutions, industries, safety & compliance, export capabilities, and contact workflows.
+World-class, responsive marketing site for Laxmi Dyes Industries covering products, solutions, industries, safety & compliance, and contact workflows.
 
 ## Getting Started
 1. Clone or download this folder.
@@ -17,7 +17,6 @@ products.html
 solutions.html
 industries.html
 safety-compliance.html
-export.html
 contact.html
 assets/
   css/style.css

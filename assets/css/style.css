@@ -1,3 +1,76 @@
+/* --- Products Preview Section (Home) --- */
+.products-preview .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+.products-preview .eyebrow {
+    color: #0072b1;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.2em;
+}
+.products-preview h2#products-preview-title {
+    font-size: 1.45rem;
+    font-weight: 700;
+    margin: 0;
+    color: #232b38;
+}
+.products-preview .btn--outline {
+    min-width: 150px;
+    text-align: center;
+}
+.products-preview .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.3rem 1.1rem;
+}
+.products-preview .card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    padding: 1.1rem 1rem 1.2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.2s;
+}
+.products-preview .card h3 {
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #0d3c61;
+    margin-bottom: 0.3em;
+}
+.products-preview .card p {
+    font-size: 0.97em;
+    color: #444;
+    margin-bottom: 0.7em;
+}
+.products-preview .card img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 0.1em;
+}
+.products-preview .note {
+    background: #f4f7fb;
+    border-radius: 8px;
+    padding: 0.7em 1em 0.7em 2.2em;
+    margin-top: 1.2em;
+    font-size: 0.97em;
+    color: #2a3a4d;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.03);
+    position: relative;
+}
+.products-preview .note span {
+    position: absolute;
+    left: 0.9em;
+    top: 0.9em;
+    font-size: 1.2em;
+    color: #0072b1;
+}
 :root {
     color-scheme: light;
     --color-bg: #f4f7fb;
@@ -27,9 +100,6 @@
     --btn-ghost-color: var(--color-text);
     --pill-bg: rgba(13, 122, 230, 0.08);
     --pill-border: rgba(13, 122, 230, 0.2);
-    --export-bg: linear-gradient(120deg, #e4eefc, #f8fbff);
-    --export-overlay: linear-gradient(120deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.8));
-    --export-pattern: radial-gradient(circle at 15% 20%, rgba(13, 122, 230, 0.15), transparent 55%),
         radial-gradient(circle at 80% 0%, rgba(10, 177, 158, 0.12), transparent 45%),
         radial-gradient(circle at 50% 80%, rgba(13, 122, 230, 0.1), transparent 35%);
     --footer-bg: #f0f4fb;
@@ -68,9 +138,6 @@ body.theme-night {
     --btn-ghost-color: var(--color-text);
     --pill-bg: rgba(255, 255, 255, 0.03);
     --pill-border: var(--color-border);
-    --export-bg: linear-gradient(120deg, #040d18, #0b1c33);
-    --export-overlay: linear-gradient(120deg, rgba(5, 11, 17, 0.92), rgba(5, 11, 17, 0.6));
-    --export-pattern: radial-gradient(circle at 10% 20%, rgba(69, 255, 176, 0.1), transparent 45%),
         radial-gradient(circle at 80% 0%, rgba(74, 210, 255, 0.1), transparent 35%),
         radial-gradient(circle at 50% 80%, rgba(74, 210, 255, 0.08), transparent 35%);
     --footer-bg: #04090f;
@@ -396,7 +463,6 @@ body[data-page="products"] .primary-nav a[href="products.html"],
 body[data-page="solutions"] .primary-nav a[href="solutions.html"],
 body[data-page="industries"] .primary-nav a[href="industries.html"],
 body[data-page="safety"] .primary-nav a[href="safety-compliance.html"],
-body[data-page="export"] .primary-nav a[href="export.html"],
 body[data-page="contact"] .primary-nav a[href="contact.html"] {
     color: var(--color-accent-strong);
 }
@@ -619,36 +685,6 @@ h1, h2, h3, h4, h5 {
     }
 }
 
-.about__media {
-    min-height: 280px;
-    border-radius: 1.4rem;
-    background: linear-gradient(135deg, rgba(74, 210, 255, 0.18), rgba(69, 255, 176, 0.25));
-    box-shadow: var(--shadow-soft);
-    position: relative;
-    overflow: hidden;
-}
-
-.about__media::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.35) 2px, transparent 0),
-        radial-gradient(circle at 75% 35%, rgba(255, 255, 255, 0.2) 2px, transparent 0),
-        radial-gradient(circle at 45% 65%, rgba(255, 255, 255, 0.25) 2px, transparent 0);
-    background-size: 120px 120px;
-    opacity: 0.3;
-}
-
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.1rem;
-}
-
-@media (min-width: 992px) {
-    .card-grid {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
 }
 
 .card-list {
