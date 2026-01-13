@@ -1,3 +1,65 @@
+/* --- Industries Hero Section --- */
+.hero--industries .hero__content {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    padding-left: 0;
+}
+.hero--industries .hero__panel {
+    flex: 2;
+    min-width: 0;
+    font-size: 0.97em;
+    margin-left: -3rem;
+    background: rgba(255,255,255,0.96);
+    box-shadow: 0 6px 32px rgba(0,0,0,0.13);
+    border-radius: 22px;
+    padding: 2.2rem 2.2rem 2.2rem 2.7rem;
+    border: 1.5px solid #e3ecf9;
+    transition: box-shadow 0.2s;
+}
+.hero--industries .hero__panel:hover {
+    box-shadow: 0 12px 40px rgba(13,122,230,0.13);
+}
+.hero--industries .hero__panel h1 {
+    font-size: 1.45rem;
+    margin-bottom: 0.7rem;
+    color: #0d3c61;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+.hero--industries .hero__panel .eyebrow {
+    font-size: 0.98em;
+    color: #0ab19e;
+    font-weight: 500;
+    margin-bottom: 0.2em;
+}
+.hero--industries .hero__intro p {
+    font-size: 0.85em;
+    color: #4a5565;
+    margin-bottom: 0.2em;
+}
+.hero--industries .hero__cta {
+    margin-top: 1.1em;
+    display: flex;
+    gap: 1em;
+}
+.hero--industries .hero__image {
+    flex: 1;
+    min-width: 180px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.hero--industries .hero__image img {
+    width: 92%;
+    max-width: 320px;
+    border-radius: 14px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    object-fit: cover;
+    margin-top: 1.2rem;
+    margin-right: 0.5rem;
+}
 /* --- Products Preview Section (Home) --- */
 .products-preview .section-header {
     margin-bottom: 1.5rem;
