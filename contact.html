@@ -46,35 +46,84 @@
     </header>
 
     <main id="main-content">
-        <section class="hero hero--sub">
-            <div class="container hero__content">
-                <p class="eyebrow">Contact Us</p>
-                <h1>Get in Touch</h1>
-                <p>Contact us today for product inquiries, export partnerships, bulk orders, and customized chemical sourcing solutions.</p>
+        <style>
+        .contact-hero {
+            background: linear-gradient(120deg, #fafdff 0%, #eaf6fb 100%);
+            border-radius: 32px;
+            box-shadow: 0 8px 40px rgba(13,122,230,0.10);
+            padding: 2.5rem 2.5rem 2.2rem 2.5rem;
+            margin: 2.2rem auto 0 auto;
+            max-width: 1100px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2.5rem;
+        }
+        .contact-hero__info {
+            flex: 2;
+            min-width: 260px;
+            display: flex;
+            flex-direction: column;
+            gap: 0.7em;
+        }
+        .contact-hero__map {
+            flex: 1;
+            min-width: 220px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .contact-hero__map iframe {
+            width: 100%;
+            max-width: 340px;
+            height: 220px;
+            border-radius: 18px;
+            border: none;
+            box-shadow: 0 4px 24px rgba(13,122,230,0.10);
+        }
+        @media (max-width: 900px) {
+            .contact-hero {
+                flex-direction: column !important;
+                gap: 2rem !important;
+                padding: 1.2rem 0.7rem 1.2rem 0.7rem !important;
+                max-width: 98vw !important;
+            }
+            .contact-hero__map iframe {
+                max-width: 98vw !important;
+                height: 160px !important;
+                border-radius: 14px !important;
+            }
+        }
+        @media (max-width: 600px) {
+            .contact-hero {
+                padding: 0.5rem 0.2rem 0.5rem 0.2rem !important;
+                gap: 1.2rem !important;
+            }
+            .contact-hero__map iframe {
+                height: 100px !important;
+                border-radius: 10px !important;
+            }
+        }
+        </style>
+        <section class="contact-hero">
+            <div class="contact-hero__info">
+                <p class="eyebrow" style="font-size:1em; color:#0ab19e; font-weight:600; letter-spacing:2px; margin-bottom:0.3em;">Contact Us</p>
+                <h1 style="font-size:1.22rem; color:#0d3c61; font-family:var(--font-heading); font-weight:700; margin-bottom:0.35rem; letter-spacing:-0.5px;">Get in Touch</h1>
+                <p style="font-size:0.98em; color:#3a4a5d; margin-bottom:0.28em;">Contact us today for product inquiries, export partnerships, bulk orders, and customized chemical sourcing solutions.</p>
+                <h2 style="font-size:1.08em; color:#0ab19e; font-weight:600; margin-top:1.2em;">Laxmi Dyes Industries</h2>
+                <address style="font-size:1em; color:#3a4a5d; margin-bottom:0.5em;">Plot No. 7616, Near Karmatur Chowkdi,<br>GIDC, Ankleshwar – 393002,<br>Bharuch, Gujarat, India</address>
+                <ul class="contact-links" style="list-style:none; padding:0; margin:0 0 0.5em 0; display:flex; flex-direction:column; gap:0.3em;">
+                    <li><a href="tel:+917048239718" style="color:#0d3c61; font-weight:500;">Phone: +91 70482 39718</a></li>
+                    <li><a href="tel:+971552932497" style="color:#0d3c61; font-weight:500;">Phone: +971 552932497</a></li>
+                    <li><a href="mailto:laxmidyes@gmail.com" style="color:#0d3c61; font-weight:500;">Email: laxmidyes@gmail.com</a></li>
+                    <li><a href="https://wa.me/917048239718" target="_blank" rel="noopener" style="color:#0d3c61; font-weight:500;">WhatsApp: +91 70482 39718</a></li>
+                </ul>
+                <p style="font-size:0.98em; color:#3a4a5d;">GSTIN: 24ABYPV1466E1Z6</p>
+                <p style="font-size:0.98em; color:#3a4a5d;">MSME (Udyam): UDYAM-GJ-06-0020496</p>
             </div>
-        </section>
-
-        <section class="section contact-details">
-            <div class="container split">
-                <div>
-                    <h2>Laxmi Dyes Industries</h2>
-                    <address>
-                        Plot No. 7616, Near Karmatur Chowkdi,<br>
-                        GIDC, Ankleshwar – 393002,<br>
-                        Bharuch, Gujarat, India
-                    </address>
-                    <ul class="contact-links">
-                        <li><a href="tel:+917048239718">Phone: +91 70482 39718</a></li>
-                        <li><a href="tel:+971552932497">Phone: +971 552932497</a></li>
-                        <li><a href="mailto:laxmidyes@gmail.com">Email: laxmidyes@gmail.com</a></li>
-                        <li><a href="https://wa.me/917048239718" target="_blank" rel="noopener">WhatsApp: +91 70482 39718</a></li>
-                    </ul>
-                    <p>GSTIN: 24ABYPV1466E1Z6</p>
-                    <p>MSME (Udyam): UDYAM-GJ-06-0020496</p>
-                </div>
-                <div class="map-wrapper" aria-label="Map to Laxmi Dyes Industries">
-                    <iframe title="Map showing GIDC Ankleshwar" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.9047366120445!2d73.004!3d21.6155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0215c45a4bc47%3A0x7d5f8d0ae06f65!2sGIDC%2C%20Ankleshwar!5e0!3m2!1sen!2sin!4v1700000000000" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+            <div class="contact-hero__map" aria-label="Map to Laxmi Dyes Industries">
+                <iframe title="Map showing GIDC Ankleshwar" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.9047366120445!2d73.004!3d21.6155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0215c45a4bc47%3A0x7d5f8d0ae06f65!2sGIDC%2C%20Ankleshwar!5e0!3m2!1sen!2sin!4v1700000000000" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </section>
 

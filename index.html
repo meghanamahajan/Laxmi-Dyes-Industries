@@ -114,7 +114,7 @@
                     <article class="card product-card">
                         <h3>Caustic Soda (Sodium Hydroxide)</h3>
                         <p>Solid / flakes for chemical and process industries</p>
-                        <img class="product-card__image" src="img/causticSoda.png" alt="Caustic Soda (Sodium Hydroxide)" loading="lazy" decoding="async">
+                        <img class="product-card__image" src="img/Caustic soda.jpeg" alt="Caustic Soda (Sodium Hydroxide)" loading="lazy" decoding="async">
                     </article>
                     <article class="card product-card">
                         <h3>Caustic Soda Lye (Liquid Sodium Hydroxide)</h3>
@@ -124,12 +124,12 @@
                     <article class="card product-card">
                         <h3>Soda Ash (Sodium Carbonate)</h3>
                         <p>Alkali chemical for detergents, glass and textile sectors</p>
-                        <img class="product-card__image" src="img/sodaAsh.png" alt="Soda Ash (Sodium Carbonate)" loading="lazy" decoding="async">
+                        <img class="product-card__image" src="img/SODA Ash.jpeg" alt="Soda Ash (Sodium Carbonate)" loading="lazy" decoding="async">
                     </article>
                     <article class="card product-card">
                         <h3>Hydrogen Peroxide (Industrial Grade)</h3>
                         <p>Oxidizing agent and bleaching chemical</p>
-                        <img class="product-card__image" src="img/peroxide.png" alt="Hydrogen Peroxide (Industrial Grade)" loading="lazy" decoding="async">
+                        <img class="product-card__image" src="img/Hydrogen peroxide.jpeg" alt="Hydrogen Peroxide (Industrial Grade)" loading="lazy" decoding="async">
                     </article>
                 </div>
                 <p class="note">
@@ -140,19 +140,79 @@
         </section>
 
         <section class="section section--tight solutions-preview">
+            <style>
+            .solutions-preview .container.split {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 2.5rem;
+                background: linear-gradient(120deg, #fafdff 0%, #eaf6fb 100%);
+                border-radius: 32px;
+                box-shadow: 0 8px 40px rgba(13,122,230,0.10);
+                padding: 2.5rem 2.5rem 2.2rem 2.5rem;
+                margin: 0 auto 2.5rem auto;
+                max-width: 1100px;
+                flex-wrap: wrap;
+            }
+            .solutions-preview .container.split > div {
+                flex: 2;
+                min-width: 260px;
+                display: flex;
+                flex-direction: column;
+                gap: 0.7em;
+            }
+            .solutions-media {
+                flex: 1;
+                min-width: 220px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .solutions-media img {
+                width: 100%;
+                max-width: 340px;
+                height: 220px;
+                border-radius: 18px;
+                box-shadow: 0 4px 24px rgba(13,122,230,0.10);
+                object-fit: cover;
+            }
+            @media (max-width: 900px) {
+                .solutions-preview .container.split {
+                    flex-direction: column !important;
+                    gap: 2rem !important;
+                    padding: 1.2rem 0.7rem 1.2rem 0.7rem !important;
+                    max-width: 98vw !important;
+                }
+                .solutions-media img {
+                    max-width: 98vw !important;
+                    height: 160px !important;
+                    border-radius: 14px !important;
+                }
+            }
+            @media (max-width: 600px) {
+                .solutions-preview .container.split {
+                    padding: 0.5rem 0.2rem 0.5rem 0.2rem !important;
+                    gap: 1.2rem !important;
+                }
+                .solutions-media img {
+                    height: 100px !important;
+                    border-radius: 10px !important;
+                }
+            }
+            </style>
             <div class="container split">
                 <div>
-                    <p class="eyebrow">Reliable Chemical Trading &amp; Export Services</p>
-                    <h2>Customized Chemical Sourcing &amp; Supply</h2>
-                    <ul class="checklist">
+                    <p class="eyebrow" style="font-size:1em; color:#0ab19e; font-weight:600; letter-spacing:2px; margin-bottom:0.3em;">Reliable Chemical Trading & Export Services</p>
+                    <h2 style="font-size:1.22rem; color:#0d3c61; font-family:var(--font-heading); font-weight:700; margin-bottom:0.35rem; letter-spacing:-0.5px;">Customized Chemical Sourcing & Supply</h2>
+                    <ul class="checklist" style="font-size:1em; color:#3a4a5d; margin-bottom:0.5em;">
                         <li>✔ Bulk procurement and consistent supply</li>
                         <li>✔ Tailored product sourcing based on application needs</li>
                         <li>✔ Competitive pricing with transparent deals</li>
                         <li>✔ Export documentation support for global buyers</li>
                         <li>✔ Dedicated shipping and logistics coordination</li>
                     </ul>
-                    <p>Whether you require just-in-time supplies or long-term contracts, we offer flexible trading solutions backed by strong market experience and supplier relationships.</p>
-                    <a class="btn btn--primary" href="solutions.html">Explore solutions</a>
+                    <p style="font-size:0.98em; color:#3a4a5d; margin-bottom:0.5em;">Whether you require just-in-time supplies or long-term contracts, we offer flexible trading solutions backed by strong market experience and supplier relationships.</p>
+                    <a class="btn btn--primary" style="font-size:1em; padding:0.6em 1.7em; border-radius:2em; background: linear-gradient(90deg, #4ad2ff 0%, #0ab19e 100%); color:#fff; box-shadow:0 2px 12px rgba(10,177,158,0.10);" href="solutions.html">Explore solutions</a>
                 </div>
                 <figure class="solutions-media">
                     <img src="img/solutions.jpg" alt="Logistics team managing chemical consignments" loading="lazy" decoding="async">
