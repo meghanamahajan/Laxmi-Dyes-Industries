@@ -58,138 +58,107 @@
             </div>
         </section>
 
-        <section class="section">
+        <section class="section section--tight policy-section">
             <style>
-            .compliance-section {
-                display: flex;
-                gap: 2.5rem;
-                background: linear-gradient(120deg, #fafdff 0%, #eaf6fb 100%);
-                border-radius: 32px;
-                box-shadow: 0 8px 40px rgba(13,122,230,0.10);
-                padding: 2.5rem 2.5rem 2.2rem 2.5rem;
-                margin: 0 auto 2.5rem auto;
-                max-width: 1100px;
-                flex-wrap: wrap;
-                align-items: stretch;
+            .policy-section .container {
+                max-width: 1200px;
+                margin: 0 auto;
             }
-            .compliance-section .compliance-details {
-                flex: 2;
-                min-width: 260px;
+            .policy-card {
+                background: linear-gradient(120deg, #fafdff 0%, #eaf6fb 100%);
+                border-radius: 28px;
+                box-shadow: 0 8px 40px rgba(13,122,230,0.10);
+                padding: 2rem 1.3rem 1.7rem 1.3rem;
+                margin-bottom: 2rem;
                 display: flex;
                 flex-direction: column;
-                gap: 1.2em;
-                justify-content: center;
+                gap: 1em;
             }
-            .compliance-section .compliance-details ul {
-                background: #fff;
-                border-radius: 18px;
-                box-shadow: 0 2px 12px rgba(13,122,230,0.07);
-                padding: 1.2em 1.5em;
-                margin-bottom: 0.7em;
-                font-size: 1.05em;
+            .policy-section h2 {
+                font-size: 1.45rem;
+                color: #0d3c61;
+                margin-bottom: 0.6em;
+                text-align: center;
+                font-family: var(--font-heading);
             }
-            .compliance-section .cert-grid {
+            .policy-section h3 {
+                color: #0ab19e;
+                font-size: 1em;
+                margin-bottom: 0.3em;
                 display: flex;
-                gap: 1.5em;
-                margin-top: 0.7em;
+                align-items: center;
+                gap: 0.5em;
             }
-            .compliance-section .cert-grid article {
+            .policy-section h3 .icon {
+                font-size: 1em;
+                color: #0ab19e;
+            }
+            .policy-section ul {
                 background: #fff;
                 border-radius: 14px;
                 box-shadow: 0 2px 12px rgba(13,122,230,0.07);
-                padding: 1em 1.3em;
-                min-width: 120px;
-                text-align: center;
-            }
-            .compliance-section .cert-grid h2 {
-                font-size: 1.1em;
-                color: #0ab19e;
-                margin-bottom: 0.2em;
-            }
-            .compliance-section .cert-grid p {
-                font-size: 1em;
-                color: #3a4a5d;
-                margin: 0;
-            }
-            .compliance-section .compliance-card {
-                flex: 1;
-                min-width: 220px;
-                background: #fff;
-                border-radius: 18px;
-                box-shadow: 0 2px 12px rgba(13,122,230,0.07);
-                padding: 1.5em 1.2em;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: flex-start;
-                gap: 0.7em;
-                margin-top: 0.5em;
-            }
-            .compliance-section .compliance-card h2 {
-                font-size: 1.15em;
-                color: #0d3c61;
-                margin-bottom: 0.3em;
-            }
-            .compliance-section .compliance-card p {
-                font-size: 1em;
-                color: #3a4a5d;
+                padding: 0.7em 1em;
                 margin-bottom: 0.5em;
+                font-size: 0.98em;
+                list-style: none;
             }
-            .compliance-section .compliance-card a {
+            .policy-section ul li {
+                margin-bottom: 0.35em;
+                position: relative;
+                padding-left: 1.3em;
+            }
+            .policy-section ul li:before {
+                content: "\2714";
+                position: absolute;
+                left: 0.1em;
+                color: #0ab19e;
                 font-size: 1em;
-                padding: 0.6em 1.7em;
-                border-radius: 2em;
-                background: linear-gradient(90deg, #4ad2ff 0%, #0ab19e 100%);
-                color: #fff;
-                box-shadow: 0 2px 12px rgba(10,177,158,0.10);
-                text-decoration: none;
-                font-weight: 600;
+                top: 0.1em;
             }
-            @media (max-width: 900px) {
-                .compliance-section {
-                    flex-direction: column !important;
-                    gap: 2rem !important;
-                    padding: 1.2rem 0.7rem 1.2rem 0.7rem !important;
-                    max-width: 98vw !important;
-                }
-                .compliance-section .compliance-card {
-                    margin-top: 0 !important;
-                }
+            .policy-section p {
+                font-size: 0.98em;
+                color: #3a4a5d;
+                margin-bottom: 0.7em;
             }
-            @media (max-width: 600px) {
-                .compliance-section {
-                    padding: 0.5rem 0.2rem 0.5rem 0.2rem !important;
-                    gap: 1.2rem !important;
+            @media (max-width: 700px) {
+                .policy-card {
+                    padding: 0.7rem 0.3rem 0.7rem 0.3rem;
                 }
-                .compliance-section .compliance-details ul {
-                    padding: 0.7em 0.7em !important;
+                .policy-section h2 {
+                    font-size: 1.05rem;
                 }
             }
             </style>
-            <div class="compliance-section">
-                <div class="compliance-details">
-                    <ul class="bullet-list">
-                        <li>Quality Assurance &amp; Product Integrity: Batch Consistency: We ensure every shipment of Caustic Soda, Soda Ash, and industrial acids meets the exact technical specifications and purity levels promised in our Certificate of Analysis (COA).</li>
-                        <li>Supply with Material Safety Data Sheets (MSDS)</li>
-                        <li>Proper packaging, labeling, and storage as per regulatory norms</li>
-                        <li>Compliance with local, national and export standards</li>
-                        <li>Environmentally responsible trading practices</li>
+            <div class="container">
+                <h2>Safety, Quality &amp; Environmental Policy</h2>
+                <div class="policy-card">
+                    <h3><span class="icon">&#128274;</span> Our Commitment to Responsible Global Distribution</h3>
+                    <p>At Laxmi Dyes Industries, we recognize that the chemicals we supply are the lifeblood of global industry—but they also demand the highest standards of stewardship. Our policy is built on the principle of "Zero Harm, Absolute Purity."</p>
+                    <h3><span class="icon">&#128200;</span> 1. Quality Assurance &amp; Product Integrity</h3>
+                    <ul>
+                        <li><strong>Batch Consistency:</strong> We ensure every shipment of Caustic Soda, Soda Ash, and industrial acids meets the exact technical specifications and purity levels promised in our Certificate of Analysis (COA).</li>
+                        <li><strong>Vetted Supply Chain:</strong> We only source from manufacturing units that adhere to ISO 9001 standards, ensuring traceability from the production floor to the final delivery.</li>
                     </ul>
-                    <h2>Certifications &amp; Registrations</h2>
-                    <div class="cert-grid">
-                        <article>
-                            <h2>GSTIN</h2>
-                            <p>24ABYPV1466E1Z6</p>
-                        </article>
-                        <article>
-                            <h2>MSME (Udyam)</h2>
-                            <p>UDYAM-GJ-06-0020496</p>
-                        </article>
-                    </div>
+                    <h3><span class="icon">&#128737;</span> 2. Dangerous Goods (DG) Safety &amp; Compliance</h3>
+                    <ul>
+                        <li><strong>Regulatory Mastery:</strong> We operate in strict accordance with the IMDG Code for sea freight and GHS (Globally Harmonized System) for labeling.</li>
+                        <li><strong>UN-Certified Packaging:</strong> All hazardous materials are packed in UN-Approved drums, IBCs, or ISO tanks, specifically tested to withstand the rigors of international transit and prevent leaks or environmental exposure.</li>
+                        <li><strong>Clear Documentation:</strong> Every shipment is accompanied by a 16-section, GHS-compliant Safety Data Sheet (SDS) and a Dangerous Goods Declaration (DGD) where required.</li>
+                    </ul>
+                    <h3><span class="icon">&#127793;</span> 3. Environmental Stewardship</h3>
+                    <ul>
+                        <li><strong>Spill Prevention:</strong> Our logistics partners are selected based on their ability to handle chemicals without environmental compromise.</li>
+                        <li><strong>Resource Efficiency:</strong> By optimizing our shipping routes from Gujarat’s ports, we minimize the carbon footprint of our global delivery network.</li>
+                    </ul>
+                    <h3><span class="icon">&#9881;</span> 4. Continuous Improvement</h3>
+                    <ul>
+                        <li>We commit to regular internal audits of our handling SOPs and stay updated on evolving UAE and international chemical regulations to protect our clients from compliance risks.</li>
+                    </ul>
                 </div>
-              
             </div>
         </section>
+
+        <!-- Compliance section removed as requested -->
     </main>
 
     <footer class="site-footer">

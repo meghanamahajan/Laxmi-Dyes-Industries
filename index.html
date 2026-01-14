@@ -229,7 +229,52 @@
                     </div>
                     <a class="link-arrow" href="industries.html">See all industries</a>
                 </div>
-                    <div class="industry-grid industry-grid--poster">
+                <style>
+                .industry-grid--poster {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+                    gap: 1.2rem;
+                    margin-top: 1.2rem;
+                }
+                .industry-card {
+                    background: #fff;
+                    border-radius: 16px;
+                    box-shadow: 0 2px 12px rgba(13,122,230,0.07);
+                    padding: 0.7rem 0.7rem 0.5rem 0.7rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    min-width: 120px;
+                    max-width: 180px;
+                    margin: 0 auto;
+                    transition: box-shadow 0.2s;
+                }
+                .industry-card img {
+                    width: 100%;
+                    height: 80px;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    box-shadow: 0 2px 8px rgba(13,122,230,0.08);
+                    background: #fafdff;
+                    margin-bottom: 0.5em;
+                }
+                @media (max-width: 700px) {
+                    .industry-grid--poster {
+                        grid-template-columns: repeat(2, 1fr);
+                        gap: 0.7rem;
+                    }
+                    .industry-card img {
+                        height: 54px;
+                    }
+                }
+                </style>
+                <div class="industry-grid industry-grid--poster">
+                    <div class="industry-card"><img src="img/cleaig-fotor.pn" alt="Factory"></div>
+                    <div class="industry-card"><img src="https://source.unsplash.com/300x200/?pharmaceutical" alt="Pharmaceutical"></div>
+                    <div class="industry-card"><img src="https://source.unsplash.com/300x200/?textile" alt="Textile"></div>
+                    <div class="industry-card"><img src="https://source.unsplash.com/300x200/?water-treatment" alt="Water Treatment"></div>
+                    <div class="industry-card"><img src="https://source.unsplash.com/300x200/?construction" alt="Construction"></div>
+                    <div class="industry-card"><img src="https://source.unsplash.com/300x200/?chemical" alt="Chemical"></div>
                     <span class="sr-only">Industries We Serve</span>
                 </div>
             </div>
