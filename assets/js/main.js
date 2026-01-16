@@ -3,6 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('[data-header]');
     const navToggle = document.querySelector('[data-nav-toggle]');
     const nav = document.querySelector('[data-nav]');
+    const navOverlay = document.querySelector('[data-nav-overlay]');
+    const navClose = document.querySelector('[data-nav-close]');
     const themeToggle = document.querySelector('[data-theme-toggle]');
     const themeLabel = document.querySelector('[data-theme-toggle-label]');
 
@@ -80,18 +82,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     const closeNav = () => {
+        const wasOpen = body.classList.contains('nav-open');
         body.classList.remove('nav-open');
         if (navToggle) {
             navToggle.setAttribute('aria-expanded', 'false');
+            if (wasOpen) {
+                requestAnimationFrame(() => navToggle.focus());
+            }
+        }
+    };
+
+    const focusFirstNavLink = () => {
+        const firstNavLink = nav?.querySelector('a');
+        if (firstNavLink) {
+            requestAnimationFrame(() => firstNavLink.focus());
         }
     };
 
     if (navToggle) {
         navToggle.addEventListener('click', () => {
-            const isOpen = body.classList.toggle('nav-open');
-            navToggle.setAttribute('aria-expanded', String(isOpen));
+            const isOpen = body.classList.contains('nav-open');
+            if (isOpen) {
+                closeNav();
+                return;
+            }
+            body.classList.add('nav-open');
+            navToggle.setAttribute('aria-expanded', 'true');
+            focusFirstNavLink();
         });
     }
+
+    navOverlay?.addEventListener('click', closeNav);
+    navClose?.addEventListener('click', closeNav);
 
     nav?.querySelectorAll('a').forEach((link) => {
         link.addEventListener('click', closeNav);
