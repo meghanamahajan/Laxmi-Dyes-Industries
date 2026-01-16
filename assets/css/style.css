@@ -540,9 +540,12 @@ button {
 }
 
 .brand__logo {
+    width: 88px;
+    height: 88px;
     padding: 0.35rem;
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.65);
+    object-fit: contain;
 }
 
 body.theme-night .brand__logo {
