@@ -36,7 +36,6 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="products.html">Products</a></li>
-                    <li><a href="solutions.html">Solutions</a></li>
                     <li><a href="industries.html">Industries We Serve</a></li>
                           <li><a href="safety-compliance.html" aria-current="page">Safety &amp; Compliance</a></li>
                     <li><a href="export.html">Export Capabilities</a></li>
@@ -53,14 +52,82 @@
 
     <main id="main-content">
         <section class="hero hero--sub">
-            <div class="container hero__content" style="display: flex; align-items: center; gap: 2.2rem; flex-wrap: wrap; flex-direction: row;">
-                <div style="flex:2; min-width:220px; order:1;">
+            <style>
+            .safety-hero {
+                display: flex;
+                align-items: center;
+                gap: 2.5rem;
+                flex-wrap: wrap;
+            }
+            .safety-hero__copy {
+                flex: 2;
+                min-width: 240px;
+                order: 1;
+            }
+            .safety-hero__figure {
+                flex: 1;
+                min-width: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                order: 2;
+            }
+            .safety-hero__badge-wrapper {
+                position: relative;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1.2rem;
+            }
+            .safety-hero__badge-wrapper::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: 50%;
+                background: linear-gradient(135deg, rgba(13, 122, 230, 0.15), rgba(10, 177, 158, 0.2));
+                z-index: 0;
+                transform: scale(1.25);
+                opacity: 0.8;
+            }
+            .safety-hero__badge {
+                width: clamp(220px, 32vw, 320px);
+                height: auto;
+                border-radius: 18px;
+                border: 6px solid #ecf3ff;
+                box-shadow: 0 18px 45px rgba(13, 122, 230, 0.2);
+                background: #fff;
+                object-fit: contain;
+                position: relative;
+                z-index: 1;
+            }
+            @media (min-width: 768px) {
+                .safety-hero__figure {
+                    justify-content: flex-end;
+                }
+            }
+            @media (max-width: 640px) {
+                .safety-hero {
+                    text-align: center;
+                }
+                .safety-hero__figure {
+                    order: 1;
+                }
+                .safety-hero__copy {
+                    order: 2;
+                }
+            }
+            </style>
+            <div class="container hero__content safety-hero">
+                <div class="safety-hero__copy">
                     <p class="eyebrow">Safety, Compliance &amp; Certifications</p>
                     <h1>Our Commitment to Responsible Global Distribution</h1>
                     <p>At Laxmi Dyes Industries, we recognize that the chemicals we supply are the lifeblood of global industry—but they also demand the highest standards of stewardship. Our policy is built on the principle of &quot;Zero Harm, Absolute Purity.&quot;</p>
                 </div>
-                <figure style="flex:1; min-width:160px; display:flex; justify-content:flex-end; align-items:center; margin:0; order:2;">
-                    <img src="img/ISO.jpeg" alt="ISO Certification" style="width:180px; height:180px; object-fit:cover; border-radius:50%; border:5px solid #eaf6fb; box-shadow:0 4px 18px rgba(13,122,230,0.13); background:#fff; margin-left:60px; margin-right:0;" loading="lazy" decoding="async">
+                <figure class="safety-hero__figure">
+                    <div class="safety-hero__badge-wrapper">
+                        <img class="safety-hero__badge" src="img/ISO.jpeg" alt="ISO Certification" loading="lazy" decoding="async">
+                    </div>
                 </figure>
             </div>
         </section>
@@ -72,24 +139,28 @@
                 margin: 0 auto;
             }
             .policy-card {
-                background: linear-gradient(120deg, #fafdff 0%, #eaf6fb 100%);
+                background: color-mix(in srgb, var(--color-card) 95%, transparent);
                 border-radius: 28px;
-                box-shadow: 0 8px 40px rgba(13,122,230,0.10);
+                box-shadow: var(--shadow-soft);
+                border: 1px solid var(--color-border);
                 padding: 2rem 1.3rem 1.7rem 1.3rem;
                 margin-bottom: 2rem;
                 display: flex;
                 flex-direction: column;
                 gap: 1em;
             }
+            body.theme-night .policy-card {
+                background: color-mix(in srgb, var(--color-surface) 92%, rgba(4, 9, 15, 0.6));
+            }
             .policy-section h2 {
                 font-size: 1.45rem;
-                color: #0d3c61;
+                color: var(--color-text);
                 margin-bottom: 0.6em;
                 text-align: center;
                 font-family: var(--font-heading);
             }
             .policy-section h3 {
-                color: #0ab19e;
+                color: var(--color-accent-strong);
                 font-size: 1em;
                 margin-bottom: 0.3em;
                 display: flex;
@@ -98,33 +169,38 @@
             }
             .policy-section h3 .icon {
                 font-size: 1em;
-                color: #0ab19e;
+                color: inherit;
             }
             .policy-section ul {
-                background: #fff;
+                background: var(--color-card);
                 border-radius: 14px;
-                box-shadow: 0 2px 12px rgba(13,122,230,0.07);
+                box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+                border: 1px solid var(--color-border);
                 padding: 0.7em 1em;
                 margin-bottom: 0.5em;
                 font-size: 0.98em;
                 list-style: none;
             }
+            body.theme-night .policy-section ul {
+                box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
+            }
             .policy-section ul li {
                 margin-bottom: 0.35em;
                 position: relative;
                 padding-left: 1.3em;
+                color: var(--color-muted);
             }
             .policy-section ul li:before {
                 content: "\2714";
                 position: absolute;
                 left: 0.1em;
-                color: #0ab19e;
+                color: var(--color-accent-strong);
                 font-size: 1em;
                 top: 0.1em;
             }
             .policy-section p {
                 font-size: 0.98em;
-                color: #3a4a5d;
+                color: var(--color-muted);
                 margin-bottom: 0.7em;
             }
             @media (max-width: 700px) {
@@ -195,7 +271,6 @@
                 <h4>Navigate</h4>
                 <ul>
                     <li><a href="products.html">Products</a></li>
-                    <li><a href="solutions.html">Solutions</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
